@@ -53,6 +53,7 @@
             android:id="@+id/dividieren"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickDividieren"
             android:text="Dividieren" />
 
         <TextView
