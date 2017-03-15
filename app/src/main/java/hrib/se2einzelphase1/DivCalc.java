@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class DivCalc extends AppCompatActivity {
 
+    //deklarieren der I/Os
     EditText inputDividend;
     EditText inputDivosor;
     TextView output;
@@ -17,12 +18,15 @@ public class DivCalc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_div_calc);
 
+        //referenz zu der View
         inputDividend = (EditText) findViewById(R.id.inputDividend);
         inputDivosor = (EditText) findViewById(R.id.inputDivisor);
         output = (TextView) findViewById(R.id.output);
     }
 
     public void onClickDividieren(View v) {
+
+        //try catch für nichteingegebene werte
         try {
             double dividend = Double.parseDouble(String.valueOf(inputDividend.getText()));
             double divisor = Double.parseDouble(String.valueOf(inputDivosor.getText()));
