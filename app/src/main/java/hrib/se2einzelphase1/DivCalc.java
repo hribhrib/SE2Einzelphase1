@@ -23,8 +23,18 @@ public class DivCalc extends AppCompatActivity {
     }
 
     public void onClickDividieren(View v) {
-    // do something when the button is clicked
-        output.setText(inputDividend.getText());
+        try {
+            double dividend = Double.parseDouble(String.valueOf(inputDividend.getText()));
+            double divisor = Double.parseDouble(String.valueOf(inputDivosor.getText()));
+
+            if (dividend == 0 || divisor == 0) {
+                output.setText("Bitte Zahlen <> 0");
+            } else {
+                output.setText("" + (dividend / divisor));
+            }
+        } catch (Exception e){
+                output.setText("Bitte beide Zahlen eintragen");
+        }
 
     }
 }
